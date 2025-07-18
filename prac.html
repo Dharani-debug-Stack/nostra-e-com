@@ -1,0 +1,63 @@
+<section>
+   <div id="slider">
+    <div id="ima1" class="slide">
+        <img src="img/frontbanner.webp" class="h-96 w-full rounded">
+      </div>
+      <div id="ima2" class="slide">
+        <img src="img/fb2.webp" class="h-96 w-full rounded">
+      </div>
+      <div class="slide">
+        <img src="img/fb4.webp" class="h-96 w-full rounded">
+      </div>
+      <div class="slide">
+        <img src="img/fb3.webp" class="h-96 w-full rounded">
+      </div>
+      </div>
+      <div class="arrow">
+    <button id="start">start</button>
+       <button id="end">end</button>
+        </div>
+
+     </section>
+
+     <style>
+        #slider{
+            overflow: hidden;
+            display: flex;
+            width: 400%;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .slide{
+            width: 100%;
+            height: 25%;
+            margin-right: 3%;
+            margin-left: 3%;
+        }
+        .arrow{
+            width: 100%;
+            top: 50%;
+            position: absolute;
+            font-size: larger;
+            font-weight: bold;
+            display: flex;
+           justify-content: space-around;
+           color: white;
+        }
+     </style>
+     <script>
+        var start=document.getElementById("start")
+        var image1=document.getElementById("ima1")
+        var image2=document.getElementById("ima2")
+        var end=document.getElementById("end")
+        start.addEventListener("click",function()
+    {
+        image1.style.display="none"
+    })
+     end.addEventListener("click",function()
+    {
+        image1.style.display="block"
+    })
+
+
+     </script>

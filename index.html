@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <title>Nostra</title>
+  <style>
+   
+    #slides img{
+      width: 100%;
+      flex-shrink: 0;
+      
+    }
+    #slides{
+      display: flex;
+    }
+    .photo:hover .view{
+      display: block;
+    
+    }
+    .most-wanted {
+  padding: 20px;
+  background: #fff;
+}
+
+.most-wanted h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Scrollable container */
+.scroll-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual card */
+.wanted-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Image container */
+.image-box {
+  position: relative;
+  width: 180px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Image */
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Always-visible overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.5); /* gray */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.overlay span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+    
+  </style>
+</head>
+
+<body class="font-serif">
+  <!-- Header notification -->
+  <section class="notify p-2 text-gray-200  flex justify-center gap-10 " style="background-color: #1D232c;">
+    <h1 class=" text-xs md:text-2xl">Sign Up and <span class="font-bold">GET 20% OFF</span> for your first Order </h1>
+    <h2 class=" close text-xs md:text-xl cursor-pointer">X</h2>
+  </section>
+  <!-- Responsive Navbar -->
+   <nav class="flex justify-between items-center p-4 shadow-xl sticky top-0 z-10 bg-white">
+    <h2 class=" font-bold text-2xl" style="color: #1D232c;">Nostra</h2>
+
+    <p class="border border-black p-2 w-96 rounded-xl hidden gap-2 items-center md:flex "> <i class="fa-solid fa-magnifying-glass text-gray-500"></i> <input  class="outline-none" placeholder="Search Product..."></p>
+    
+    <div class="flex gap-10  font-serif hidden md:flex " >
+      <p class="hover:underline">Home</p>
+      <p class="hover:underline">Product</p>
+      <p class="hover:underline">Most Wanted</p>
+      <p class="hover:underline">About</p>
+      <p class="hover:underline">Contact</p>
+    </div>
+    <div class="toggle md:hidden">  <i class="fa-solid fa-bars text-xl "></i></div>
+   
+   </nav>
+   <!-- side navbar -->
+    <section  id ="side-Nav" class="flex  flex-col gap-10 z-10 transition-all duration-1000 font-serif text-white top-0 fixed p-4  md:flex " style="background-color: #1D232c; width: 50%; right: -50%;">
+      <h2 class="closeNav text-xs text-right md:text-xl">X</h2>
+      <p class="hover:underline">Home</p>
+      <p class="hover:underline">Product</p>
+      <p class="hover:underline">Most Wanted</p>
+      <p class="hover:underline">About</p>
+      <p class="hover:underline">Contact</p>
+    </section>
+
+    <!-- header clothing banner section -->
+     <section class="overflow-hidden relative">
+   <div id="slides" class="transition-transform duration-1000">
+    
+        <img src="img/frontbanner.webp" class="h-96 w-full rounded">
+     
+      
+        <img src="img/fb2.webp" class="h-96 w-full rounded">
+      
+      
+        <img src="img/fb4.webp" class="h-96 w-full rounded">
+      
+      
+      </div>
+       <!-- left arrow -->
+
+      <div class="absolute left-6  top-24   bg-black rounded-2xl">
+       
+        <svg onclick="nextSlide()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 text-2xl font-bold text-white">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+  
+</svg></div>
+<!-- right arrow -->
+ <div class=" absolute right-6 top-24 bg-black rounded-2xl ">
+<svg onclick="prevSlide()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 text-2xl font-bold text-white ">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+</svg>
+      </div>
+<div class="flex justify-center">
+      <div class="absolute bottom-24">
+        <button class="bg-purple-100 rounded-xl p-2">Explore!</button>
+      </div>
+      </div>
+      
+
+     </section>
+
+     <!-- products -->
+      <section class=" m-5">
+        <div class="text-center">
+        <h1 class="font-bold text-2xl">Our Products</h1>
+        <p>Discover our curated collection of premium clothing and accessories</p>
+        </div>
+        <div class="m-5 text-center">
+          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4 mt-4 hover:bg-black hover:text-white">All</button>
+          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white">Tops</button>
+          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white">Bottoms</button>
+          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white">Dresses</button>
+          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white">Outerwear</button>
+          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white">Shoes</button>
+        </div>
+        <div class="text-center">
+          <select class="p-2 border border-black rounded-xl ">
+            <option>sort by</option>
+            <option value="Low to High">Price:Low to high</option>
+            <option value="High to Low">Price:High to Low</option>
+          </select>
+        </div>
+<!-- images -->
+        <div class="flex justify-between flex-wrap gap-4 m-6">
+        
+         <div class="photo w-80 shadow-2xl p-4 rounded relative"> 
+          <img src="img/balck t.jpg" alt="" class=" h-52 w-80 rounded">
+          <h2>Classic Black T-Shirt</h2>
+          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
+          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+          <span class=" absolute top-0 left-4 rounded pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-green-700 text-white" >New</span>
+          <div class="view absolute top-20 left-10 hidden ">
+        <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+        </div>
+        </div>
+        <div class="photo w-80 shadow-2xl p-4 rounded relative"> 
+          <img src="img/brown.png" alt=""  class="h-52 w-80 rounded">
+          <h2>Classic Black T-Shirt</h2>
+          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
+          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+          <div class="view absolute top-20 left-10 hidden ">
+        <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+        </div>
+        </div>
+        <div class=" photo w-80 shadow-2xl p-4 rounded relative"> 
+          <img src="img/casual.png" alt=""  class="h-52 w-80 rounded">
+          <h2>Classic Black T-Shirt</h2>
+          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
+          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+           <span class=" absolute top-0 left-4 rounded pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-green-700 text-white" >New</span>
+        <div class="view absolute top-20 left-10 hidden ">
+        <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+        </div>
+          </div>
+        <div class="photo w-80 shadow-2xl p-4 rounded relative"> 
+          <img src="img/jacket.png" alt=""  class="h-52 w-80 rounded">
+          <h2>Classic Black T-Shirt</h2>
+          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
+          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+       <span class=" absolute top-0 left-4 rounded pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-green-700 text-white" >New</span>
+        <div class="view absolute top-20 left-10 hidden ">
+        <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+        </div>
+      </div>
+        <div class="photo w-80 shadow-2xl p-4 rounded relative"> 
+         <img src="img/jean.png" alt=""  class="h-52 w-80 rounded">
+          <h2>Classic Black T-Shirt</h2>
+          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
+          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+        <span class=" absolute top-0 right-0 rounded pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-red-600 text-white" >Sale</span>
+      <div class="view absolute top-20 left-10 hidden ">
+        <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+        </div>  
+      </div>
+        <div class="photo w-80 shadow-2xl p-4 rounded relative"> 
+          <img src="img/neet.png" alt=""  class="h-52 w-80 rounded">
+          <h2>Classic Black T-Shirt</h2>
+          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
+          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+         <span class=" absolute top-0 right-0 rounded pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-red-600 text-white" >Sale</span>
+        <div class="view absolute top-20 left-10 hidden ">
+        <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+        </div>
+        </div>
+        <div class="photo w-80 shadow-2xl p-4 rounded relative"> 
+          <img src="img/regular.png" alt=""  class="h-52 w-80 rounded">
+          <h2>Classic Black T-Shirt</h2>
+          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
+          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+         <span class=" absolute top-0 right-0 rounded pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-red-600 text-white" >Sale</span>
+        <div class="view absolute top-20 left-10 hidden ">
+        <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+        </div>
+        </div>
+        <div class="  photo w-80 shadow-2xl p-4 rounded relative"> 
+          <img src="img/shoe.png" alt="" class=" h-52 w-80 rounded">
+          <h2>Classic Black T-Shirt</h2>
+          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
+          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+        <div class="view absolute top-20 left-10 hidden ">
+        <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+        </div>
+      </div> 
+        </div>
+      </section>
+
+     
+
+  <!-- About Section -->
+  <section class="text-center py-16 bg-gray-50">
+    <h2 class="text-3xl font-bold mb-4">About Fashion</h2>
+    <p class="text-gray-600 mb-10 max-w-xl mx-auto">We are passionate about bringing you the finest in contemporary fashion. Our curated collection features premium quality clothing and accessories from emerging designers and established brands.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <div>
+        <div class="text-4xl mb-2">✨</div>
+        <h3 class="font-semibold">Premium Quality</h3>
+        <p class="text-gray-500 text-sm">Only the finest materials and craftsmanship</p>
+      </div>
+      <div>
+        <div class="text-4xl mb-2">🚚</div>
+        <h3 class="font-semibold">Fast Shipping</h3>
+        <p class="text-gray-500 text-sm">Quick delivery to your doorstep</p>
+      </div>
+      <div>
+        <div class="text-4xl mb-2">❤️</div>
+        <h3 class="font-semibold">Customer Love</h3>
+        <p class="text-gray-500 text-sm">Exceptional service and satisfaction</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrival -->
+    <section class="most-wanted">
+  <h2>Most Wanted</h2>
+  <div class="scroll-container">
+    <div class="wanted-card">
+      <div class="image-box">
+        <img src="img/balck t.jpg" alt="Item 1">
+        <div class="overlay"><span class="bg-black rounded-xl p-2">Shop Now</span></div>
+      </div>
+    </div>
+    <div class="wanted-card">
+      <div class="image-box">
+        <img src="img/jacket.png" alt="Item 2">
+        <div class="overlay"><span class="bg-black rounded-xl p-2">Shop Now</span></div>
+      </div>
+    </div>
+    <div class="wanted-card">
+      <div class="image-box">
+        <img src="img/jean.png" alt="Item 3">
+        <div class="overlay"><span class="bg-black rounded-xl p-2">Shop Now</span></div>
+      </div>
+    </div>
+    <div class="wanted-card">
+      <div class="image-box">
+        <img src="img/neet.png" alt="Item 4">
+        <div class="overlay"><span class="bg-black rounded-xl p-2">Shop Now</span></div>
+      </div>
+    </div>
+    <div class="wanted-card">
+      <div class="image-box">
+        <img src="img/regular.png" alt="Item 5">
+        <div class="overlay"><span class="bg-black rounded-xl p-2">Shop Now</span></div>
+      </div>
+    </div>
+    <div class="wanted-card">
+      <div class="image-box">
+        <img src="img/casual.png" alt="Item 6">
+        <div class="overlay"><span class="bg-black rounded-xl p-2">Shop Now</span></div>
+      </div>
+    </div>
+    <div class="wanted-card">
+      <div class="image-box">
+        <img src="img/brown.png" alt="Item 7">
+        <div class="overlay"><span class="bg-black rounded-xl p-2">Shop Now</span></div>
+      </div>
+    </div>
+    <div class="wanted-card">
+      <div class="image-box">
+        <img src="img/shoe.png" alt="Item 8">
+        <div class="overlay"><span class="bg-black rounded-xl p-2">Shop Now</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+   
+    
+
+  <!-- Contact Section -->
+  <section class="px-6 py-12 bg-white max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
+    <p class="text-center text-gray-600 mb-10">Have questions? We’d love to hear from you.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Info -->
+      <div class="space-y-4">
+        <h3 class="font-semibold text-lg">Contact Information</h3>
+        <p>📍 123 Nostra Street,city , country 23562</p>
+        <p>📧 hello@nostra.com</p>
+        <p>📞 +1 (11) 23546217</p>
+      </div>
+      <!-- Contact Form -->
+      <form class="space-y-4">
+        <input type="text" placeholder="Name" class="w-full border border-gray-300 p-2 rounded" required />
+        <input type="email" placeholder="Email" class="w-full border border-gray-300 p-2 rounded" required />
+        <textarea placeholder="Message" class="w-full border border-gray-300 p-2 rounded" rows="4"></textarea>
+        <button type="submit" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white px-6 py-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div>
+        <h4 class="font-semibold mb-2">Nostra</h4>
+        <p class="text-sm text-gray-400">Premium clothing and accessories for the modern lifestyle.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-gray-400">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Most Wanted</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Categories</h4>
+        <ul class="space-y-1 text-gray-400">
+          <li>Tops</li>
+          <li>Bottoms</li>
+          <li>Dresses</li>
+          <li>Shoes</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Follow Us</h4>
+        <div class="flex space-x-3 text-gray-400 text-xl">
+         <i class="fa-brands fa-whatsapp" style="color: #f7f9fc;"></i>
+          <i class="fa-brands fa-facebook" style="color: #f7f9fd;"></i>
+          <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+          <i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-sm text-gray-500 mt-6">© 2024 Nostra Store. All rights reserved.</p>
+  </footer>
+
+
+
+
+     
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
