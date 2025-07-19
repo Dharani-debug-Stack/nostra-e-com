@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <title>Nostra</title>
+</head>
+
+<body class="font-serif">
+     <!-- Header notification -->
+  <section class="notify p-2 text-gray-200  flex justify-center gap-10 " style="background-color: #1D232c;">
+    <h1 class=" text-xs md:text-2xl">Sign Up and <span class="font-bold">GET 20% OFF</span> for your first Order </h1>
+    <h2 class=" close text-xs font-bold  md:text-xl cursor-pointer">X</h2>
+  </section>
+  <!-- Responsive Navbar -->
+   <nav class="flex justify-between items-center p-4 shadow-xl sticky top-0 z-10 bg-white">
+    <h2 class=" font-bold text-2xl" style="color: #1D232c;">Nostra</h2>
+
+    
+    
+    <div class="flex gap-10  font-serif hidden md:flex " >
+     <a href="index.html"><p class="hover:underline">Home</p></a>
+      <p class="hover:underline">Product</p>
+      <p class="hover:underline">Most Wanted</p>
+      <p class="hover:underline">About</p>
+      <p class="hover:underline">Contact</p>
+    </div>
+    <div class="toggle md:hidden">  <i class="fa-solid fa-bars text-xl "></i></div>
+   
+   </nav>
+   <!-- side navbar -->
+    <section  id ="side-Nav" class="flex  flex-col gap-10 z-10 transition-all duration-1000 font-serif text-white top-0 fixed p-4  md:flex " style="background-color: #1D232c; width: 50%; right: -50%;">
+      <h2 class="closeNav text-xs text-right md:text-xl">X</h2>
+      <a href="index.html"><p class="hover:underline">Home</p></a>
+      <p class="hover:underline" >Product</p>
+      <p class="hover:underline">Most Wanted</p>
+      <p class="hover:underline">About</p>
+      <p class="hover:underline">Contact</p>
+    </section>
+
+    <!-- collection page -->
+     <!-- side occasions -->
+      <section class="m-4 grid grid-cols-2">
+
+        <div class="flex gap-4 text-xs md:text-lg  justify-center" >
+        <div>
+        <h2 class="font-bold text-xs md:text-xl mt-2 mb-2">Occassion</h2>
+      <p> <input type="checkbox">All</p> 
+        <p><input type="checkbox">Tops</p>
+        <p><input type="checkbox">Bottoms</p>
+       <p><input type="checkbox">OuterWear</p> 
+        
+       <h2 class="font-bold text-xs md:text-xl mt-2 mb-2">colors</h2>
+      <p> <input type="checkbox">Blue</p> 
+        <p><input type="checkbox">Green</p>
+        <p><input type="checkbox">Black</p>
+       <p><input type="checkbox">white</p> 
+        
+       <h2 class="font-bold text-xs md:text-xl mt-2 mb-2">Sort By Price</h2>
+      <p> <input type="checkbox">High to Low</p> 
+        <p><input type="checkbox">Low to high</p>
+       </div>
+       <div class="bg-black w-1 h-96 md:h-1/2  " >
+      </div> 
+       </div>
+
+       <!-- collection photos section -->
+        <div>
+        <p class="border border-black p-1  rounded-xl  gap-2 items-center flex mb-2 md:p-2 " style="width: 100%;"> <i class="fa-solid fa-magnifying-glass text-gray-500"></i> <input id="search" class="outline-none w-full" placeholder="Search Product..."></p>
+    
+        <div  id="container"  class="grid grid-cols-3 mb-2 gap-y-10 gap-x-3 ">
+          <div class="photo text-xs shadow-xl">
+            <img src="img/balck t.jpg" style="height:100%; width: 100%;">
+           <h2>Black T-Shirt</h2></div>
+          <div class="photo text-xs"><img src="img/shoe.png" style="height:100%; width: 100%;"><h2> Ballet Flats</h2></div>
+          <div class="photo text-xs"><img src="img/regular.png" style="height:100%; width: 100%;"> <h2>Tones Elegance</h2></div>
+          <div class="photo text-xs"><img src="img/neet.png" style="height:100%; width: 100%;"><h2>Grey suit</h2></div>
+          <div class="photo text-xs"><img src="img/jean.png" style="height:100%; width: 100%;"><h2>Blue jean </h2></div>
+          <div class="photo text-xs"><img src="img/jacket.png" style="height:100%; width: 100%;"><h2>Denium Co-ord set</h2></div>
+          <div class="photo text-xs">
+            <img src="img/brown.png" style="height:90%; width: 90%;"> 
+            <h2>Power sholder Blazer set</h2></div>
+          <div class="photo text-xs"><img src="img/casual.png" style="height:90%; width: 90%;"><h2>Urban chic set</h2></div>
+        </div>
+        </div>
+      </section>
+
+<!-- Contact Section -->
+  <section class="px-6 py-12 bg-white max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
+    <p class="text-center text-gray-600 mb-10">Have questions? We’d love to hear from you.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Info -->
+      <div class="space-y-4">
+        <h3 class="font-semibold text-lg">Contact Information</h3>
+        <p>📍 123 Nostra Street,city , country 23562</p>
+        <p>📧 hello@nostra.com</p>
+        <p>📞 +1 (11) 23546217</p>
+      </div>
+      <!-- Contact Form -->
+      <form class="space-y-4">
+        <input type="text" placeholder="Name" class="w-full border border-gray-300 p-2 rounded" required />
+        <input type="email" placeholder="Email" class="w-full border border-gray-300 p-2 rounded" required />
+        <textarea placeholder="Message" class="w-full border border-gray-300 p-2 rounded" rows="4"></textarea>
+        <button type="submit" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+     <!-- Footer -->
+  <footer class="bg-black text-white px-6 py-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div>
+        <h4 class="font-semibold mb-2">Nostra</h4>
+        <p class="text-sm text-gray-400">Premium clothing and accessories for the modern lifestyle.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-gray-400">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Most Wanted</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Categories</h4>
+        <ul class="space-y-1 text-gray-400">
+          <li>Tops</li>
+          <li>Bottoms</li>
+          <li>Dresses</li>
+          <li>Shoes</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Follow Us</h4>
+        <div class="flex space-x-3 text-gray-400 text-xl">
+         <i class="fa-brands fa-whatsapp" style="color: #f7f9fc;"></i>
+          <i class="fa-brands fa-facebook" style="color: #f7f9fd;"></i>
+          <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+          <i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-sm text-gray-500 mt-6">© 2024 Nostra Store. All rights reserved.</p>
+  </footer>
+
+
+
+
+     
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
