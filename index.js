@@ -35,3 +35,91 @@ closeNavbar.addEventListener("click",function()
   function prevSlide() {
     showSlide(currentIndex - 1);
   }
+// search functionality
+  let search = document.getElementById("search");
+let photoContainer = document.getElementById("container");
+let productList = photoContainer.querySelectorAll(".photo");
+
+search.addEventListener("keyup", function(event) {
+  let enteredValue = event.target.value.toUpperCase();
+
+  for (let i = 0; i < productList.length; i++) {
+    let productName = productList[i].querySelector("h2").textContent;
+
+    if (!productName.toUpperCase().includes(enteredValue)) {
+      productList[i].style.display = "none";
+    } else {
+      productList[i].style.display = "block";
+    }
+  }
+});
+
+let button = document.getElementById("showTops");
+let allProducts = document.querySelectorAll(".photo");
+button.addEventListener("click", function() {
+  allProducts.forEach(product => {
+    if (product.classList.contains("tops")) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  })
+})
+let all=document.getElementById("all")
+all.addEventListener("click",function(){
+   allProducts.forEach(product => {
+    if (product.classList.contains("photo"))
+       {
+      product.style.display = "block";
+    }
+   })
+  })
+  let bottom=document.getElementById("bottom")
+bottom.addEventListener("click",function(){
+   allProducts.forEach(product => {
+    if (product.classList.contains("bottom"))
+       {
+      product.style.display = "block";
+    }
+    else{
+      product.style.display="none"
+    }
+   })
+  })
+  
+  let dreses=document.getElementById("dreses")
+dreses.addEventListener("click",function(){
+   allProducts.forEach(product => {
+    if (product.classList.contains("dreses"))
+       {
+      product.style.display = "block";
+    }
+    else{
+      product.style.display="none"
+    }
+   })
+  })
+  let Outerwear=document.getElementById("Outerwear")
+Outerwear.addEventListener("click",function(){
+   allProducts.forEach(product => {
+    if (product.classList.contains("Outerwear"))
+       {
+      product.style.display = "block";
+    }
+    else{
+      product.style.display="none"
+    }
+   })
+  })
+  let Shoes=document.getElementById("Shoes")
+Shoes.addEventListener("click",function(){
+   allProducts.forEach(product => {
+    if (product.classList.contains("Shoes"))
+       {
+      product.style.display = "block";
+    }
+    else{
+      product.style.display="none"
+    }
+   })
+  })

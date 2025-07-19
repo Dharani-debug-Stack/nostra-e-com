@@ -98,13 +98,13 @@
   <!-- Header notification -->
   <section class="notify p-2 text-gray-200  flex justify-center gap-10 " style="background-color: #1D232c;">
     <h1 class=" text-xs md:text-2xl">Sign Up and <span class="font-bold">GET 20% OFF</span> for your first Order </h1>
-    <h2 class=" close text-xs md:text-xl cursor-pointer">X</h2>
+    <h2 class=" close text-xs font-bold  md:text-xl cursor-pointer">X</h2>
   </section>
   <!-- Responsive Navbar -->
    <nav class="flex justify-between items-center p-4 shadow-xl sticky top-0 z-10 bg-white">
     <h2 class=" font-bold text-2xl" style="color: #1D232c;">Nostra</h2>
 
-    <p class="border border-black p-2 w-96 rounded-xl hidden gap-2 items-center md:flex "> <i class="fa-solid fa-magnifying-glass text-gray-500"></i> <input  class="outline-none" placeholder="Search Product..."></p>
+    <p class="border border-black p-2 w-96 rounded-xl hidden gap-2 items-center md:flex "> <i class="fa-solid fa-magnifying-glass text-gray-500"></i> <input id="search" class="outline-none" placeholder="Search Product..."></p>
     
     <div class="flex gap-10  font-serif hidden md:flex " >
       <p class="hover:underline">Home</p>
@@ -170,12 +170,12 @@
         <p>Discover our curated collection of premium clothing and accessories</p>
         </div>
         <div class="m-5 text-center">
-          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4 mt-4 hover:bg-black hover:text-white">All</button>
-          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white">Tops</button>
-          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white">Bottoms</button>
-          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white">Dresses</button>
-          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white">Outerwear</button>
-          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white">Shoes</button>
+          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4 mt-4 hover:bg-black hover:text-white" id="all">All</button>
+          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white" id="showTops">Tops</button>
+          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white" id="bottom">Bottoms</button>
+          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white" id="dreses">Dresses</button>
+          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white"id="Outerwear">Outerwear</button>
+          <button class="bg-gray-400 rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 hover:bg-black hover:text-white" id="Shoes">Shoes</button>
         </div>
         <div class="text-center">
           <select class="p-2 border border-black rounded-xl ">
@@ -185,9 +185,9 @@
           </select>
         </div>
 <!-- images -->
-        <div class="flex justify-between flex-wrap gap-4 m-6">
+        <div id="container" class="flex justify-between flex-wrap gap-4 m-6">
         
-         <div class="photo w-80 shadow-2xl p-4 rounded relative"> 
+         <div  class="photo  tops w-80 shadow-2xl p-4 rounded relative"> 
           <img src="img/balck t.jpg" alt="" class=" h-52 w-80 rounded">
           <h2>Classic Black T-Shirt</h2>
           <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
@@ -202,105 +202,105 @@
         <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
         </div>
         </div>
-        <div class="photo w-80 shadow-2xl p-4 rounded relative"> 
+        <div  class="photo   tops w-80 shadow-2xl p-4 rounded relative"> 
           <img src="img/brown.png" alt=""  class="h-52 w-80 rounded">
-          <h2>Classic Black T-Shirt</h2>
-          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <h2>Power sholder Blazer set</h2>
+          <p class="text-gray-400">A timeless Power sholder Blazer set  made from premium cotton</p>
           <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
-          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+          <span class="font-bold">$30.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
           <div class="view absolute top-20 left-10 hidden ">
         <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
         </div>
         </div>
-        <div class=" photo w-80 shadow-2xl p-4 rounded relative"> 
+        <div  class=" photo dreses tops w-80 shadow-2xl p-4 rounded relative"> 
           <img src="img/casual.png" alt=""  class="h-52 w-80 rounded">
-          <h2>Classic Black T-Shirt</h2>
-          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <h2>Urban chic set</h2>
+          <p class="text-gray-400">A timeless Urban chic set made from premium cotton</p>
           <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
-          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+          <span class="font-bold">$50.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
            <span class=" absolute top-0 left-4 rounded pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-green-700 text-white" >New</span>
         <div class="view absolute top-20 left-10 hidden ">
         <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
         </div>
           </div>
-        <div class="photo w-80 shadow-2xl p-4 rounded relative"> 
+        <div  class="photo Outerwear w-80 shadow-2xl p-4 rounded relative"> 
           <img src="img/jacket.png" alt=""  class="h-52 w-80 rounded">
-          <h2>Classic Black T-Shirt</h2>
-          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <h2>Denium Co-ord set</h2>
+          <p class="text-gray-400">A timeless Denium Co-ord set made from premium cotton</p>
           <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
-          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+          <span class="font-bold">$25.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
        <span class=" absolute top-0 left-4 rounded pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-green-700 text-white" >New</span>
         <div class="view absolute top-20 left-10 hidden ">
         <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
         </div>
       </div>
-        <div class="photo w-80 shadow-2xl p-4 rounded relative"> 
+        <div  class="photo bottom w-80 shadow-2xl p-4 rounded relative"> 
          <img src="img/jean.png" alt=""  class="h-52 w-80 rounded">
-          <h2>Classic Black T-Shirt</h2>
-          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <h2>Blue jean set</h2>
+          <p class="text-gray-400">A timeless Blue jean set made from premium cotton</p>
           <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
-          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+          <span class="font-bold">$65.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
         <span class=" absolute top-0 right-0 rounded pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-red-600 text-white" >Sale</span>
       <div class="view absolute top-20 left-10 hidden ">
         <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
         </div>  
       </div>
-        <div class="photo w-80 shadow-2xl p-4 rounded relative"> 
+        <div  class="photo dreses shirt w-80 shadow-2xl p-4 rounded relative"> 
           <img src="img/neet.png" alt=""  class="h-52 w-80 rounded">
-          <h2>Classic Black T-Shirt</h2>
-          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <h2>Grey power suit</h2>
+          <p class="text-gray-400">A timeless Grey power suit made from premiun cotton</p>
           <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
-          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+          <span class="font-bold">$90.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
          <span class=" absolute top-0 right-0 rounded pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-red-600 text-white" >Sale</span>
         <div class="view absolute top-20 left-10 hidden ">
         <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
         </div>
         </div>
-        <div class="photo w-80 shadow-2xl p-4 rounded relative"> 
+        <div   class="photo dreses shirt w-80 shadow-2xl p-4 rounded relative"> 
           <img src="img/regular.png" alt=""  class="h-52 w-80 rounded">
-          <h2>Classic Black T-Shirt</h2>
-          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <h2>Earth Tones Elegance</h2>
+          <p class="text-gray-400">A timeless Earth Tones Elegance made from premium cotton</p>
           <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
-          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+          <span class="font-bold">$48.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
          <span class=" absolute top-0 right-0 rounded pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-red-600 text-white" >Sale</span>
         <div class="view absolute top-20 left-10 hidden ">
         <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
         </div>
         </div>
-        <div class="  photo w-80 shadow-2xl p-4 rounded relative"> 
+        <div   class="photo Shoes shirt w-80 shadow-2xl p-4 rounded relative"> 
           <img src="img/shoe.png" alt="" class=" h-52 w-80 rounded">
-          <h2>Classic Black T-Shirt</h2>
-          <p class="text-gray-400">A timeless classic Black t-shirt made from premium cotton</p>
+          <h2>Minimalist Ballet Flats</h2>
+          <p class="text-gray-400">A timeless Minimalist Ballet Flats made from premium cotton</p>
           <p> <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
             <i class="fa-solid fa-star-half" style="color: #FFD43B;"></i>(128)</p>
-          <span class="font-bold">$29.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
+          <span class="font-bold">$60.99 <del class="text-gray-400">$39.99</del></span> <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
         <div class="view absolute top-20 left-10 hidden ">
         <button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-white text-black">view Details</button><button class="rounded-xl pl-4 pr-4 pt-1 pb-1 mr-4  mt-4 bg-black text-white">Add to Cart</button>
         </div>
