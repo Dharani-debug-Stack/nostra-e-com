@@ -24,10 +24,10 @@
     
     <div class="flex gap-10  font-serif hidden md:flex " >
      <a href="index.html"><p class="hover:underline">Home</p></a>
-      <p class="hover:underline">Product</p>
-      <p class="hover:underline">Most Wanted</p>
-      <p class="hover:underline">About</p>
-      <p class="hover:underline">Contact</p>
+     <a href="collection.html"> <p class="hover:underline">Product</p></a>
+     <a href="#most-wanted"> <p class="hover:underline">Most Wanted</p></a>
+     <a href="#about">  <p class="hover:underline">About</p></a>
+     <a href="#contact">  <p class="hover:underline">Contact</p></a>lass="hover:underline">Contact</p>
     </div>
     <div class="toggle md:hidden">  <i class="fa-solid fa-bars text-xl "></i></div>
    
@@ -36,23 +36,23 @@
     <section  id ="side-Nav" class="flex  flex-col gap-10 z-10 transition-all duration-1000 font-serif text-white top-0 fixed p-4  md:flex " style="background-color: #1D232c; width: 50%; right: -50%;">
       <h2 class="closeNav text-xs text-right md:text-xl">X</h2>
       <a href="index.html"><p class="hover:underline">Home</p></a>
-      <p class="hover:underline" >Product</p>
-      <p class="hover:underline">Most Wanted</p>
-      <p class="hover:underline">About</p>
-      <p class="hover:underline">Contact</p>
+     <a href="collection.html"> <p class="hover:underline">Product</p></a>
+     <a href="#most-wanted"> <p class="hover:underline">Most Wanted</p></a>
+     <a href="#about">  <p class="hover:underline">About</p></a>
+     <a href="#contact">  <p class="hover:underline">Contact</p></a>
     </section>
 
     <!-- collection page -->
      <!-- side occasions -->
-      <section class="m-4 grid grid-cols-2">
+      <section  class="m-4 grid grid-cols-2">
 
         <div class="flex gap-4 text-xs md:text-lg  justify-center" >
         <div>
         <h2 class="font-bold text-xs md:text-xl mt-2 mb-2">Occassion</h2>
-      <p> <input type="checkbox">All</p> 
-        <p><input type="checkbox">Tops</p>
-        <p><input type="checkbox">Bottoms</p>
-       <p><input type="checkbox">OuterWear</p> 
+      <p> <input type="checkbox" id="all">All</p> 
+        <p><input type="checkbox"  id="showTops">Tops</p>
+        <p><input type="checkbox"  id="bottom">Bottoms</p>
+       <p><input type="checkbox"  id="dreses">OuterWear</p> 
         
        <h2 class="font-bold text-xs md:text-xl mt-2 mb-2">colors</h2>
       <p> <input type="checkbox">Blue</p> 
@@ -73,24 +73,24 @@
         <p class="border border-black p-1  rounded-xl  gap-2 items-center flex mb-2 md:p-2 " style="width: 100%;"> <i class="fa-solid fa-magnifying-glass text-gray-500"></i> <input id="search" class="outline-none w-full" placeholder="Search Product..."></p>
     
         <div  id="container"  class="grid grid-cols-3 mb-2 gap-y-10 gap-x-3 ">
-          <div class="photo text-xs shadow-xl">
+          <div class="photo tops text-xs shadow-xl">
             <img src="img/balck t.jpg" style="height:100%; width: 100%;">
            <h2>Black T-Shirt</h2></div>
-          <div class="photo text-xs"><img src="img/shoe.png" style="height:100%; width: 100%;"><h2> Ballet Flats</h2></div>
-          <div class="photo text-xs"><img src="img/regular.png" style="height:100%; width: 100%;"> <h2>Tones Elegance</h2></div>
-          <div class="photo text-xs"><img src="img/neet.png" style="height:100%; width: 100%;"><h2>Grey suit</h2></div>
-          <div class="photo text-xs"><img src="img/jean.png" style="height:100%; width: 100%;"><h2>Blue jean </h2></div>
-          <div class="photo text-xs"><img src="img/jacket.png" style="height:100%; width: 100%;"><h2>Denium Co-ord set</h2></div>
-          <div class="photo text-xs">
+          <div class="photo Shoes text-xs"><img src="img/shoe.png" style="height:100%; width: 100%;"><h2> Ballet Flats</h2></div>
+          <div class="photo dreses text-xs"><img src="img/regular.png" style="height:100%; width: 100%;"> <h2>Tones Elegance</h2></div>
+          <div class="photo dreses text-xs"><img src="img/neet.png" style="height:100%; width: 100%;"><h2>Grey suit</h2></div>
+          <div class="photo  bottom text-xs"><img src="img/jean.png" style="height:100%; width: 100%;"><h2>Blue jean </h2></div>
+          <div class="photo Outerwear text-xs"><img src="img/jacket.png" style="height:100%; width: 100%;"><h2>Denium Co-ord set</h2></div>
+          <div class="photo Outerwear text-xs">
             <img src="img/brown.png" style="height:90%; width: 90%;"> 
             <h2>Power sholder Blazer set</h2></div>
-          <div class="photo text-xs"><img src="img/casual.png" style="height:90%; width: 90%;"><h2>Urban chic set</h2></div>
+          <div class="photo dreses text-xs"><img src="img/casual.png" style="height:90%; width: 90%;"><h2>Urban chic set</h2></div>
         </div>
         </div>
       </section>
 
 <!-- Contact Section -->
-  <section class="px-6 py-12 bg-white max-w-6xl mx-auto">
+  <section id="#contact" class="px-6 py-12 bg-white max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
     <p class="text-center text-gray-600 mb-10">Have questions? We’d love to hear from you.</p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">

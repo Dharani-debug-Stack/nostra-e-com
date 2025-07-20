@@ -107,11 +107,11 @@
     <p class="border border-black p-2 w-96 rounded-xl hidden gap-2 items-center md:flex "> <i class="fa-solid fa-magnifying-glass text-gray-500"></i> <input id="search" class="outline-none" placeholder="Search Product..."></p>
     
     <div class="flex gap-10  font-serif hidden md:flex " >
-      <p class="hover:underline">Home</p>
-    <a href="collection.html">  <p class="hover:underline" >Product</p></a>
-      <p class="hover:underline">Most Wanted</p>
-      <p class="hover:underline">About</p>
-      <p class="hover:underline">Contact</p>
+    <a href="#home"> <p class="hover:underline">Home</p></a>  
+     <a href="collection.html"> <p class="hover:underline">Product</p></a>
+     <a href="#most-wanted"> <p class="hover:underline">Most Wanted</p></a>
+     <a href="#about">  <p class="hover:underline">About</p></a>
+     <a href="#contact">  <p class="hover:underline">Contact</p></a>
     </div>
     <div class="toggle md:hidden">  <i class="fa-solid fa-bars text-xl "></i></div>
    
@@ -119,15 +119,15 @@
    <!-- side navbar -->
     <section  id ="side-Nav" class="flex  flex-col gap-10 z-10 transition-all duration-1000 font-serif text-white top-0 fixed p-4  md:flex " style="background-color: #1D232c; width: 50%; right: -50%;">
       <h2 class="closeNav text-xs text-right md:text-xl">X</h2>
-      <p class="hover:underline">Home</p>
+      <a href="#home"> <p class="hover:underline">Home</p></a>  
      <a href="collection.html"> <p class="hover:underline">Product</p></a>
-      <p class="hover:underline">Most Wanted</p>
-      <p class="hover:underline">About</p>
-      <p class="hover:underline">Contact</p>
+     <a href="#most-wanted"> <p class="hover:underline">Most Wanted</p></a>
+     <a href="#about">  <p class="hover:underline">About</p></a>
+     <a href="#contact">  <p class="hover:underline">Contact</p></a>
     </section>
 
     <!-- header clothing banner section -->
-     <section class="overflow-hidden relative">
+     <section id="home" class="overflow-hidden relative">
    <div id="slides" class="transition-transform duration-1000">
     
         <img src="img/frontbanner.webp" class="h-96 w-full rounded">
@@ -311,7 +311,7 @@
      
 
   <!-- About Section -->
-  <section class="text-center py-16 bg-gray-50">
+  <section id="about" class="text-center py-16 bg-gray-50">
     <h2 class="text-3xl font-bold mb-4">About Fashion</h2>
     <p class="text-gray-600 mb-10 max-w-xl mx-auto">We are passionate about bringing you the finest in contemporary fashion. Our curated collection features premium quality clothing and accessories from emerging designers and established brands.</p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -334,7 +334,7 @@
   </section>
 
   <!-- New Arrival -->
-    <section class="most-wanted">
+    <section id="most-wanted" class="most-wanted">
   <h2>Most Wanted</h2>
   <div class="scroll-container">
     <div class="wanted-card">
@@ -392,7 +392,7 @@
     
 
   <!-- Contact Section -->
-  <section class="px-6 py-12 bg-white max-w-6xl mx-auto">
+  <section id="contact" class="px-6 py-12 bg-white max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
     <p class="text-center text-gray-600 mb-10">Have questions? We’d love to hear from you.</p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
